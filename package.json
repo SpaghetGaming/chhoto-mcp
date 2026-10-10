@@ -1,10 +1,10 @@
 {
-  "name": "@spaghet/chhoto-mcp",
+  "name": "@spaghetgaming/chhoto-mcp",
   "version": "1.0.0",
   "description": "MCP server for Chhoto URL shortener",
   "type": "module",
   "bin": {
-    "chhoto-mcp": "./dist/index.js"
+    "@spaghetgaming/chhoto-mcp": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
