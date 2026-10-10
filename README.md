@@ -24,7 +24,7 @@ This MCP server exposes 8 tools that let AI assistants create, manage, and query
 ### Local Development
 
 ```bash
-git clone https://github.com/spaghet-tech/chhoto-mcp.git
+git clone https://github.com/spaghetgaming/chhoto-mcp.git
 cd chhoto-mcp
 npm install
 npm run build
@@ -163,7 +163,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "chhoto-url": {
       "command": "npx",
-      "args": ["-y", "@spaghet/chhoto-mcp"],
+      "args": ["-y", "@spaghetgaming/chhoto-mcp"],
       "env": {
         "CHHOTO_URL": "http://your-instance:4567",
         "CHHOTO_API_KEY": "your-api-key"
@@ -182,7 +182,7 @@ Add to `.cursor/mcp.json`:
   "mcpServers": {
     "chhoto-url": {
       "command": "npx",
-      "args": ["-y", "@spaghet/chhoto-mcp"],
+      "args": ["-y", "@spaghetgaming/chhoto-mcp"],
       "env": {
         "CHHOTO_URL": "http://your-instance:4567",
         "CHHOTO_API_KEY": "your-api-key"
@@ -201,7 +201,7 @@ Install the MCP extension and add to your settings:
   "mcp.servers": {
     "chhoto-url": {
       "command": "npx",
-      "args": ["-y", "@spaghet/chhoto-mcp"],
+      "args": ["-y", "@spaghetgaming/chhoto-mcp"],
       "env": {
         "CHHOTO_URL": "http://your-instance:4567",
         "CHHOTO_API_KEY": "your-api-key"
@@ -254,7 +254,7 @@ npm publish --access public
 After publishing, users can run:
 
 ```bash
-npx @spaghet/chhoto-mcp
+npx @spaghetgaming/chhoto-mcp
 ```
 
 ## License
