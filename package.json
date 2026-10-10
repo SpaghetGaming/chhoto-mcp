@@ -4,7 +4,7 @@
   "description": "MCP server for Chhoto URL shortener",
   "type": "module",
   "bin": {
-    "@spaghetgaming/chhoto-mcp": "./dist/index.js"
+    "chhoto-mcp": "./bin/chhoto-mcp.js"
   },
   "scripts": {
     "build": "tsc",
