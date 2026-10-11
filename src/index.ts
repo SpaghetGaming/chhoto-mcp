@@ -237,8 +237,9 @@ function createServer(): McpServer {
     },
     async () => {
       const result = await chhotoApi('/api/version');
+      const version = typeof result === 'object' ? (result.reason || result.version || JSON.stringify(result)) : String(result);
       return {
-        content: [{ type: 'text', text: `Chhoto URL server version: ${result}` }]
+        content: [{ type: 'text', text: `Chhoto URL server version: ${version}` }]
       };
     }
   );
@@ -276,8 +277,9 @@ function createServer(): McpServer {
     },
     async () => {
       const result = await chhotoApi('/api/whoami');
+      const role = typeof result === 'object' ? (result.role || result.reason || JSON.stringify(result)) : String(result);
       return {
-        content: [{ type: 'text', text: `Current role: ${result}` }]
+        content: [{ type: 'text', text: `Current role: ${role}` }]
       };
     }
   );
@@ -286,7 +288,7 @@ function createServer(): McpServer {
 }
 
 if (TRANSPORT === 'streamable-http') {
-  const handler = createMcpHandler(createServer);
+  const handler = createMcpHandler(() => createServer());
   const nodeHandler = toNodeHandler(handler);
   const server = http.createServer((req, res) => {
     void nodeHandler(req, res);
